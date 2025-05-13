@@ -1,10 +1,8 @@
-@import './fonts.css';
-
 :root {
   --background-red: linear-gradient(144deg, #de1717 0%, #780d0d 100%);
-  --font-family: "Roboto";
-  --second-family: "Ebbe";
-  --third-family: "HondaC";
+  --text-primary: #fff;
+  --text-secondary: rgba(255, 255, 255, 0.6);
+  --bg-color: #1a1c21;
 }
 
 * {
@@ -14,10 +12,10 @@
 }
 
 body {
-  color: var(--text-primary);
+
   overflow-x: hidden;
   font-style: normal;
-  background: var(--background-color);
+  background: var(--bg-color);
 }
 
 a,

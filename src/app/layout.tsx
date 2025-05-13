@@ -1,7 +1,8 @@
-import type { Metadata } from "next";
-import "@/styles/globals.css";
-import { fonts } from "../lib/fonts";
-
+import { Page } from "@/shared/components/containers/Page/Page";
+import { Footer } from "@/shared/layout/Footer/Footer";
+import { fonts } from "@/shared/lib/fonts";
+import "@/shared/styles/globals.css";
+import { Metadata } from "next";
 
 
 export const metadata: Metadata = {
@@ -17,7 +18,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={fonts}>
-        {children}
+        <Page>
+          <main>{children}</main>
+          <Footer />
+        </Page>
       </body>
     </html>
   );
