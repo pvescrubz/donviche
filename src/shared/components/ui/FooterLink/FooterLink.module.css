@@ -2,12 +2,12 @@
   display: block;
   font-family: var(--font-family);
   font-weight: 500;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 130%;
-  color: var(--text-primary);
-  padding-block: 29.6px;
-  padding-inline: 25px;
-  transition: transform 0.4s ease-in-out;
+  color: var(--text-secondary);
+  padding-block: 5px;
+
+  transition: transform 0.4s ease-in-out, color 0.4s ease-in-out;
 }
 .span {
   position: relative;
@@ -46,18 +46,10 @@
   }
 
   .root:hover {
-    transform: scale(1.1);
+      color: var(--text-primary);
   }
   .root:active {
     transform: scale(0.95);
   }
 }
 
-@media screen and (max-width: 1024px) {
-  .root {
-    transform-origin: left;
-    padding-block: 20px;
-    font-size: 20px;
-    text-align: right;
-  }
-}
