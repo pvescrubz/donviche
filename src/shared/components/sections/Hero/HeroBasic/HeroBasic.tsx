@@ -22,7 +22,7 @@ export const HeroBasic: FC<TDiv> = () => {
             type="image/webp"
           />
           <source
-            media="(min-width: 1325px)"
+            media="(min-width: 1225px)"
             className={styles.image}
             srcSet="/images/hero_big.webp"
             type="image/webp"

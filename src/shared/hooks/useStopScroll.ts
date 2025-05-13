@@ -73,25 +73,4 @@ export const useStopScroll = (
       }
     };
   }, [condition, scrollWidth, id, ref]);
-
-  useEffect(() => {
-    console.log(activeModalIds);
-    if (activeModalIds.length === 0) return;
-
-    const pageElement = document.querySelector<HTMLElement>(".page");
-    if (!pageElement) return;
-
-    const lastModal = activeModalIds[activeModalIds.length - 1];
-    if (!lastModal || !lastModal.ref?.current) return;
-
-    if (pageElement !== lastModal.ref.current) {
-      pageElement.setAttribute("inert", "");
-    } else {
-      pageElement.removeAttribute("inert");
-    }
-
-    return () => {
-      pageElement.removeAttribute("inert");
-    };
-  }, [condition, activeModalIds]);
 };
