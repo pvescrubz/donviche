@@ -9,7 +9,7 @@ export const HeroBasic: FC<TDiv> = () => {
   return (
     <>
       <div className={styles.root}>
-        {/* <picture className={styles.image}>
+        <picture className={styles.image}>
           <source
             media="(max-width: 768px)"
             className={styles.image}
@@ -32,7 +32,7 @@ export const HeroBasic: FC<TDiv> = () => {
             alt="Hero Background"
             className={styles.image}
           />
-        </picture> */}
+        </picture>
         <Container className={styles.wrapper}>
           <h1 className={styles.title}>КУПИТЬ СКИНЫ CS2 & DOTA 2</h1>
           <p className={styles.text}>
