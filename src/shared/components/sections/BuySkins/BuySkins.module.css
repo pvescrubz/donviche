@@ -1,0 +1,30 @@
+.img {
+  position: relative !important;
+  max-width: 460px;
+  max-height: 460px;
+}
+
+.wrapper {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 50px;
+}
+
+.link {
+  position: relative;
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .img {
+    display: block;
+    margin:  0 auto;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+  
