@@ -1,8 +1,7 @@
-import { TDiv } from "@/shared/typing/elements.type";
-import { FC } from "react";
-
 import { ButtonLink } from "@/shared/components/ui/Button/ButtonLink";
 import { Container } from "@/shared/components/ui/containers/Container/Container";
+import { TDiv } from "@/shared/typing/elements.type";
+import { FC } from "react";
 import styles from "./HeroBasic.module.css";
 
 export const HeroBasic: FC<TDiv> = () => {
