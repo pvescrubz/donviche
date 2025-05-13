@@ -1,9 +1,9 @@
-import { Page } from "@/shared/components/containers/Page/Page";
-import { Footer } from "@/shared/layout/Footer/Footer";
+import { Footer } from "@/shared/components/layout/Footer/Footer";
+import { Header } from "@/shared/components/layout/Header/Header";
+import { Page } from "@/shared/components/ui/containers/Page/Page";
 import { fonts } from "@/shared/lib/fonts";
 import "@/shared/styles/globals.css";
 import { Metadata } from "next";
-
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,9 +16,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="ru">
       <body className={fonts}>
         <Page>
+          <Header />
           <main>{children}</main>
           <Footer />
         </Page>
