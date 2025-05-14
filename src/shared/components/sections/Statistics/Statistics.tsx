@@ -6,6 +6,9 @@ import { Section } from '../../ui/containers/Section/Section';
 import { Title } from '../../ui/Title/Title';
 import styles from './Statistics.module.css';
 
+
+
+
 export const Statistic: FC<TDiv> = () => {
   // ==== Состояние для запуска анимации ====
   const [hasStarted, setHasStarted] = useState(false);
@@ -137,6 +140,8 @@ export const Statistic: FC<TDiv> = () => {
             <p className={styles.text_small}>ЗА СЕГОДНЯ</p>
           </div>
         </div>
+
+        
       </Container>
     </Section>
   );
