@@ -15,13 +15,13 @@ export const BuySkinsHome: FC<TDiv> = () => {
       </Title>
       <div className={styles.wrapper}>
         <Link href="href" className={styles.link}>
-        <Image src="/images/CS.webp" alt="alt" fill  className={styles.img} />
+        <Image src="/images/CS.webp" alt="alt" fill quality={100} className={styles.img} />
         </Link>
         <Link href="href" className={styles.link}>
-        <Image src="/images/Dota.webp" alt="alt" fill className={styles.img} />
+        <Image src="/images/Dota.webp" alt="alt" fill quality={100}  className={styles.img} />
         </Link>
         <Link href="href" className={styles.link}>
-        <Image src="/images/Rust.webp" alt="alt" fill className={styles.img} />
+        <Image src="/images/Rust.webp" alt="alt" fill quality={100} className={styles.img} />
         </Link>
       </div>
     </Container>  
