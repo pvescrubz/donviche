@@ -1,4 +1,4 @@
-.bloggers-slider {
+.bloggers_slider {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 20px;
@@ -6,12 +6,12 @@
 }
 
 @media (max-width: 1024px) {
-  .bloggers-slider {
+  .bloggers_slider {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-.blogger-card {
+.blogger_card {
   display: block;
   text-decoration: none;
   color: inherit;
@@ -35,11 +35,11 @@
   }
 }
 
-.blogger-card:hover {
+.blogger_card:hover {
   transform: translateY(-5px);
 }
 
-.blogger-info {
+.blogger_info {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -52,7 +52,7 @@
   object-fit: cover;
 }
 
-.blogger-name {
+.blogger_name {
     font-family: var(--font-family);
     font-weight: 500;
     font-size: 16px;
@@ -61,7 +61,7 @@
     color: #fff;
 }
 
-.blogger-followers {
+.blogger_followers {
     font-family: var(--font-family);
     font-weight: 500;
     font-size: 14px;
@@ -70,13 +70,13 @@
     color: #de1717;
 }
 
-.show-more-container {
+.show_more_container {
     display: flex;
     justify-content: center;
     margin-top: 30px;
 }
 
-.show-more-button {
+.show_more_button {
     font-family: var(--font-family);
     font-weight: 500;
     font-size: 20px;
