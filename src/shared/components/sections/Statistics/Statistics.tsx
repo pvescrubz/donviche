@@ -10,11 +10,11 @@ import styles from './Statistics.module.css';
 
 
 export const Statistic: FC<TDiv> = () => {
-  // ==== Состояние для запуска анимации ====
+
   const [hasStarted, setHasStarted] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
 
-  // ==== Хук для анимации чисел ====
+
   const useAnimatedCounter = (end: number, duration = 1200) => {
     const [count, setCount] = useState(0);
 
@@ -41,7 +41,7 @@ export const Statistic: FC<TDiv> = () => {
     return count;
   };
 
-  // ==== Intersection Observer для ленивой анимации ====
+ 
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -63,7 +63,7 @@ export const Statistic: FC<TDiv> = () => {
     return () => observer.disconnect();
   }, []);
 
-  // ==== Получаем день года для расчётов ====
+  
   const getDayOfYear = () => {
     const today = new Date();
     const startOfYear = new Date(today.getFullYear(), 0, 0);
@@ -100,7 +100,7 @@ export const Statistic: FC<TDiv> = () => {
     }
   }, [dayOfYear]);
 
-  // ==== Формулы расчета ====
+  
   const calculateStats = (day: number) => ({
     totalAllTime: 22_543_456 + day * 17,
     totalMonth: 1_223_543 + (day % 30) * 3_740,
@@ -108,13 +108,13 @@ export const Statistic: FC<TDiv> = () => {
     today: 7000 + (day % 60) * 83,
   });
 
-  // ==== Анимированные значения ====
+  
   const totalAllTime = useAnimatedCounter(cachedStats.totalAllTime);
   const totalMonth = useAnimatedCounter(cachedStats.totalMonth);
   const totalWeek = useAnimatedCounter(cachedStats.totalWeek);
   const today = useAnimatedCounter(cachedStats.today);
 
-  // ==== JSX ====
+  
   return (
     <Section>
       <Container>
