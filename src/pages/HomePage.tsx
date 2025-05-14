@@ -3,12 +3,13 @@ import { Hero } from "@/shared/components/sections/Hero/Hero";
 import { Statistic } from "@/shared/components/sections/Statistics/Statistics";
 
 export const HomePage = () => {
-  return  (
+  return (
     <>
+
     <Hero />
     <BuySkinsHome />
     <Statistic />
+
     </>
-  
- )
+  );
 };

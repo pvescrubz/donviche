@@ -36,21 +36,10 @@
 .secondary {
   background: none;
   position: relative;
-}
-.secondary::after {
-  content: "";
-  position: absolute;
-  inset: 0;
   backdrop-filter: blur(24px);
-  background: radial-gradient(
-    141.42% 141.42% at 0% 0%,
-    #fafafa 0%,
-    rgba(246, 246, 246, 0) 100%
-  );
-  z-index: -1;
-  border-radius: inherit;
-  opacity: 0.2;
+  background: rgba(80, 80, 80, 0.3);
 }
+
 .secondary::before {
   content: "";
   position: absolute;
