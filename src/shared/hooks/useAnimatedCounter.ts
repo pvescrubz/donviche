@@ -1,4 +1,4 @@
-// hooks/useAnimatedCounter.ts
+
 import { useEffect, useState } from 'react';
 
 export const useAnimatedCounter = (end: number, duration = 2000) => {
