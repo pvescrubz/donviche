@@ -26,7 +26,6 @@ export const BuySkinsHome: FC<TDiv> = () => {
               />
             </Link>
           </li>
-
           <li className={styles.item}>
             <Link className={styles.link} href={APP_PAGES.SKINS_DOTA2.slug}>
               <Image
