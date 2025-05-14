@@ -1,12 +1,12 @@
 'use client'
-import React, { useState, useEffect } from 'react';
+import { bloggers } from '@/shared/lib/bloggers';
 import Image from 'next/image';
+import React, { useEffect, useState } from 'react';
+import { Button } from '../../ui/Button/Button';
+import { Container } from '../../ui/containers/Container/Container';
+import { Section } from '../../ui/containers/Section/Section';
 import { Title } from '../../ui/Title/Title';
 import styles from './Blogers.module.css';
-import { bloggers } from '@/shared/lib/bloggers';
-import { Section } from '../../ui/containers/Section/Section';
-import { Container } from '../../ui/containers/Container/Container';
-import { Button } from '../../ui/Button/Button';
 
 export interface IBloggersProps {
   bloggers?: Array<{
@@ -40,26 +40,26 @@ export const Bloggers: React.FC<IBloggersProps> = ({ bloggers: propBloggers }) =
     <Section>
       <Container>
         <Title>БЛОГЕРЫ РЕКОМЕНДУЮТ</Title>
-    <div className={styles["bloggers-slider"]}>
+    <div className={styles.bloggers_slider}>
       {visibleBloggers.map((blogger, index) => (
         <a
           key={index}
           href={blogger.href}
           target="_blank"
           rel="nofollow noreferrer"
-          className={styles["blogger-card"]}
+          className={styles.blogger_card}
         >
-          <div className={styles["blogger-info"]}>
+          <div className={styles.blogger_info}>
             <Image src={blogger.image} alt={blogger.name} width={100} height={100} className={styles.img}/>
-            <div className={styles["blogger-name"]}>{blogger.name}</div>
-            <div className={styles["blogger-followers"]}>{blogger.followers}</div>
+            <div className={styles.blogger_name}>{blogger.name}</div>
+            <div className={styles.blogger_followers}>{blogger.followers}</div>
           </div>
         </a>
       ))}
     </div>
     {visibleCount < displayBloggers.length && (
-      <div className={styles["show-more-container"]}>
-        <Button size='normal' variant='primary' onClick={handleShowMore} className={styles["show-more-button"]}>
+      <div className={styles.show_more_container}>
+        <Button size='normal' variant='primary' onClick={handleShowMore} className={styles.show_more_button}>
           Показать еще
         </Button>
       </div>
