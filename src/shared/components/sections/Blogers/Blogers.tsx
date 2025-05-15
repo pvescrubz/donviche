@@ -1,6 +1,7 @@
 'use client'
 import { bloggers } from '@/shared/lib/bloggers';
 import Image from 'next/image';
+import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import { Button } from '../../ui/Button/Button';
 import { Container } from '../../ui/containers/Container/Container';
@@ -42,10 +43,9 @@ export const Bloggers: React.FC<IBloggersProps> = ({ bloggers: propBloggers }) =
         <Title>БЛОГЕРЫ РЕКОМЕНДУЮТ</Title>
     <div className={styles.bloggers_slider}>
       {visibleBloggers.map((blogger, index) => (
-        <a
+        <Link
           key={index}
           href={blogger.href}
-          target="_blank"
           rel="nofollow noreferrer"
           className={styles.blogger_card}
         >
@@ -54,7 +54,7 @@ export const Bloggers: React.FC<IBloggersProps> = ({ bloggers: propBloggers }) =
             <div className={styles.blogger_name}>{blogger.name}</div>
             <div className={styles.blogger_followers}>{blogger.followers}</div>
           </div>
-        </a>
+        </Link>
       ))}
     </div>
     {visibleCount < displayBloggers.length && (
